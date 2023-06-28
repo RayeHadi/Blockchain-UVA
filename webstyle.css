@@ -1,0 +1,868 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /*background: linear-gradient(to bottom,#000000,#0f0338,#000273) fixed;*/
+    /*background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 27%, rgba(14,35,95,1) 58%, rgba(47,100,255,1) 100%, rgba(238,247,253,1) 100%, rgba(21,38,159,1) 100%, rgba(13,156,255,1) 100%) fixed;*/
+    /*background: rgb(1,3,8);
+    background: radial-gradient(circle, rgba(1,3,8,1) 0%, rgba(14,35,95,1) 0%, rgba(17,36,125,1) 21%, rgba(21,38,159,1) 37%, rgba(64,104,194,1) 66%, rgba(53,148,213,1) 100%) fixed;*/
+    position: relative;
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/background-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:-1;
+}
+body::after{
+    content: "";
+    position:fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index:-1;
+}
+.header > nav > a {
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    border-radius: 15px;
+}
+nav { /*general formatting of everything in nav class*/
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li { /*position and format of our nav links. for items in list specifically*/
+    list-style: none;
+    display: inline-block;
+    padding: 8px 5px;
+    position: relative;
+}
+
+.nav-links ul li a { /*color and size of our nav links.for each listed items text specifically*/
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links ul li::after { /*adds line underneath our nav links*/
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f05d00;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after { /*adds a hover effect to our nav link lines. works with previous function above*/
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 25%; /*top,left, and tranfrom are used together here to create a responsive centering of our text-box*/
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.text-box p {
+    margin: 10px 0 60px; /*sets top and bottom distance between p text and text above it and link below it*/
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+.hero-btn { /*turns our link into a visually appealing text box*/
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: #f05d00;
+    position: relative;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+nav .fa-solid { /*hides our icons from larger screen*/
+    display: none;
+}
+.mission { /*creates the small red boxes around our options*/
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 500px;
+}
+.layer {
+    position: relative;
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    border-radius: 30px;
+    margin-bottom: 5%;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+    display: flex;
+}
+.layer:hover {
+    background: #f05d00;
+}
+.layer h2{
+    font-weight:400;
+    font-size: 28px;
+    color: #fff;
+}
+.layer h3{
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+    opacity: 0;
+}
+.box {
+    position: absolute;
+}
+.p{ 
+    width: 100%;
+    text-align: center;
+}
+.layer p {
+    font-weight: 300;
+    color: #fff;
+    font-size: 17px;
+    opacity: 0; /*so we can't see text until we hover*/
+    transition: 1s;
+}
+.layer:hover h2{
+    opacity: 0;
+}
+.layer:hover h3 {
+    opacity: 0;
+}
+.layer:hover p {
+    opacity: 1;
+}
+/*-----------------Footer section below---------------------*/
+.footer {
+    width: 100%;
+    text-align: left;
+    padding: 30px 50px;
+    color: #fff;
+    position: absolute;
+}
+.footer h4 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.footer p{
+    font-weight: 200;
+    font-size: 15px;
+}
+.footer p:nth-of-type(2) {
+    margin-top: 5px;
+    font-weight: bold;
+}
+.footer p:nth-of-type(4){
+    font-weight: 100;
+    font-size: 13px;
+    padding-top: 20px;
+    text-align: center;
+}
+.fa-brands {
+    color: #fff;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fa-copyright {
+    color: #fff;
+    margin: 0 5px;
+}
+.footer::before {
+    content: '';
+    width: 90%;
+    height: 2px;
+    background: #f05d00;
+    display: block;
+    margin-bottom: 20px;
+}
+/*tabs with shadow below*/
+.tabs {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.tabs p {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 10px;
+}
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-col { /*creates the small orange boxes around our options*/
+    flex-basis: 31%;
+    /*background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);*/
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    border-radius: 10px;
+    margin-bottom: 15%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.tabs h3 { /*follow h3 back to html file to see what is being formatted*/
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #fff;
+}
+.tab-col:hover { /*if we hover over any of boxes there is a shadow*/
+    box-shadow: 0 0 10px 0px #f9d423;
+}
+/*------------------Our-team Page------------------*/
+.team-title {
+    width: 90%;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    text-align: center;
+}
+.team-title h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+.team-title p {
+    margin: 10px 0 60px; /*sets top and bottom distance between p text and text above it and link below it*/
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+.members {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.mem-col { /*formatting applied to each image */
+    flex-basis: 32%;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.mem-col img {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 20px;
+}
+.summ{
+    color: #fff;
+}
+.summ p{
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+.summ p{ /*creates the small orange boxes around our options*/
+    flex-basis: 31%;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    /*background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);*/
+    border-radius: 10px;
+    margin-bottom: 15%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+/*----------research page------------*/
+.team-title a{
+    font-size: 22px;
+    font-weight: 500;
+}
+.team-title a:hover { /*if we hover over any of boxes there is a shadow*/
+    box-shadow: 0 0 10px 0px #319de8;
+}
+.parts {
+    flex-basis: 31%;
+    /*background-image: none;*/
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    /*background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);*/
+    border-radius: 15px;
+    margin-bottom: 15%;
+    border: solid;
+    border-color: #fff;
+    box-sizing: border-box;
+    margin-top: 100px;
+    padding: 20px 12px;
+}
+.general {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.parts h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #000000;
+}
+.parts p {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 10px;
+}
+.general img {
+    width: 50%;
+    display: block;
+    height: auto;
+    border-radius: 20px;
+    margin: 150px auto;
+}
+/*------------Digital Assets fund page below--------------*/
+.DA-title {
+    width: 90%;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    text-align: center;
+}
+
+.DA-title h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.DA-title p {
+    margin: 10px 0 60px; /*sets top and bottom distance between p text and text above it and link below it*/
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #fff;
+}
+.objectives {
+    width: 90%;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 25%);
+}
+.sub-obj {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+}
+.objectives h1 {
+    font-size: 48px;
+    font-weight: 600;
+    text-align: left;
+}
+.label {
+    display: flex;
+    align-items: center;
+}
+.label h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-right: 5px;
+}
+.label i{
+    font-size: 24px;
+}
+.bgrounds {
+    flex-basis: 31%;
+    /*background-image: none;*/
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    /*background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);*/
+    border-radius: 15px;
+    border: solid;
+    border-color: #fff;
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding: 20px 12px;
+}
+.bgrounds p{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+}
+.objectives h1::after{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #f05d00;
+    display: block;
+    margin-bottom: 20px;
+}
+.sponsors {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 300px;
+}
+.sponsors h1 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+}
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.indv { /*formatting applied to each image */
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding-top: 50px;
+}
+.indv img:hover {
+    box-shadow: 0 0 10px 0px #bcf3f8;
+}
+.indv img {
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    transition: 0.5s
+}
+.sponsors h1::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #f05d00;
+    display: block;
+    margin-bottom: 20px;
+}
+/*------------------About Page---------------------------*/
+.About-title {
+    width: 90%;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    text-align: center;
+}
+.About-title h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+.About-title p {
+    margin: 10px 0 60px; /*sets top and bottom distance between p text and text above it and link below it*/
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #fff;
+}
+.founding {
+    width: 80%;
+    color: #fff;
+    position: relative;
+    text-align: left;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin-top: 200px;
+}
+.founding h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.founding p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 30px;
+    flex-basis: 31%;
+    /*background-image: none;*/
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    /*background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);*/
+    border-radius: 15px;
+    border-color: #fff;
+    box-sizing: border-box;
+    padding: 20px 12px;
+}
+.extras {
+    width: 80%;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    margin-bottom: 300px;
+}
+.spots {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    padding-top: 20px;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+}
+.info {
+    flex-basis: 31%;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    border-radius: 15px;
+    border-color: #fff;
+    box-sizing: border-box;
+    padding: 20px 12px;
+}
+.photos {
+    width: 98%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.singular{
+    padding: 0 20px;
+}
+.singular img {
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    margin-top: 50px;
+    transition: 1s;
+}
+.singular img:hover {
+    transform: scale(1.3);
+    z-index: 2;
+}
+.singular h3{
+    color: #fff;
+    font-size: 14px;
+    font-weight:200;
+    text-align: left;
+}
+.gallery{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 30%;
+    grid-template-rows: min-content;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding-bottom: 50px;
+}
+.gallery::-webkit-scrollbar{
+    width: 0.5em;
+    height: 0.5em;
+    opacity: 0;
+}
+.gallery::-webkit-scrollbar-thumb{
+    background-color: #fff;
+}
+/*--------------All media Queries for 700px---------------------*/
+@media(max-width: 700px) and (min-width: 500px) {
+    .About-title {
+        transform: translate(-50%, 40%);
+    }
+    .About-title p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .founding {
+        transform: translate(-50%, 25%);
+    }
+    .extras {
+        transform: translate(-50%, 30%);
+    }
+    .spots {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .gallery {
+        grid-auto-columns: 50%;
+    }
+    .nav-links ul li { /*changes format of our top menu*/
+        display: block;
+        text-align: center;
+    }
+    .nav-links { /*changes our nav menu into a completely different design when our screen size is decreased*/
+        position: fixed; /*gets rid of horizontal scrolling from our sidebar menu*/
+        /*background: rgb(1,3,8);
+        background: radial-gradient(circle, rgba(1,3,8,1) 0%, rgba(14,35,95,1) 0%, rgba(17,36,125,1) 21%, rgba(21,38,159,1) 37%, rgba(64,104,194,1) 66%, rgba(53,148,213,1) 100%);*/
+        background: #101010;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px; /*pushes our whole new menu feature offscreen*/
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s; /*time it takes to move between clicks*/
+    }
+    nav .fa-solid { /*makes our close icon visible in small window*/
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul { /*literally just moved our nav links a bit to center in small window*/
+        padding: 30px;
+    }
+    .layer {
+        width: 75%;
+    }
+    .text-box {
+        top: 15%;
+    }
+    .mission {
+        padding-top: 450px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .summ h1 {
+        font-size: 12px;
+    }
+    .summ p {
+        font-size: 10px;
+    }
+    .general img {
+        width: 80%;
+        margin: 300px auto;
+    }
+    .DA-title {
+        transform: translate(-50%, 40%);
+    }
+    .DA-title p {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 25px;
+    }
+    .objectives {
+    transform: translate(-50%, 10%);
+    }
+    .label {
+        width: 50%;
+        margin-top: 200px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .sponsors {
+        width: 40%;
+    }
+}
+/*--------------mobile device dimensions----------------*/
+@media(max-width:500px){
+    .About-title {
+        transform: translate(-50%, 40%);
+    }
+    .About-title p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .founding {
+        transform: translate(-50%, 10%);
+    }
+    .extras {
+        transform: translate(-50%, 20%);
+    }
+    .spots {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .gallery {
+        grid-auto-columns: 50%;
+    }
+    .nav-links ul li { /*changes format of our top menu*/
+        display: block;
+        text-align: center;
+    }
+    .nav-links { /*changes our nav menu into a completely different design when our screen size is decreased*/
+        position: fixed; /*gets rid of horizontal scrolling from our sidebar menu*/
+        /*background: rgb(1,3,8);
+        background: radial-gradient(circle, rgba(1,3,8,1) 0%, rgba(14,35,95,1) 0%, rgba(17,36,125,1) 21%, rgba(21,38,159,1) 37%, rgba(64,104,194,1) 66%, rgba(53,148,213,1) 100%);*/
+        background: #101010;
+        height: 100%;
+        width: 200px;
+        top: 0;
+        right: -200px; /*pushes our whole new menu feature offscreen*/
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s; /*time it takes to move between clicks*/
+    }
+    nav .fa-solid { /*makes our close icon visible in small window*/
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul { /*literally just moved our nav links a bit to center in small window*/
+        padding: 30px;
+    }
+    .layer {
+        width: 75%;
+    }
+    .text-box {
+        top: 15%;
+    }
+    .text-box h1{
+        font-size: 56px
+    }
+    .mission {
+        padding-top: 450px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .summ h1 {
+        font-size: 12px;
+    }
+    .summ p {
+        font-size: 10px;
+    }
+    .general img {
+        width: 80%;
+        margin: 300px auto;
+    }
+    .DA-title {
+        transform: translate(-50%, 40%);
+    }
+    .DA-title p {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 25px;
+    }
+    .objectives {
+        transform: translate(-50%, 10%);
+    }
+    .label {
+        width: 50%;
+        margin-top: 70px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .sponsors {
+        width: 80%;
+    }
+    .sponsors h1 {
+        text-align: left;
+    }
+    .sub-obj {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 5px;
+    }
+    .bgrounds{
+        margin-top: 5px;
+    }
+    .indv{
+        text-align: center;
+        padding-top: 25px;
+    }
+    .indv img{
+        width: 50%
+    }
+    .footer {
+        padding: 30px 20px;
+    }
+    .footer p:nth-of-type(4) {
+        text-align: left;
+    }
+    .layer h3{
+        opacity: 1;
+    }
+    .layer{
+        width: 100%;
+    }
+    .founding p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .photos{
+        padding-top: 30px;
+    }
+    .gallery {
+        grid-auto-columns: 80%;
+    }
+    .team-title{
+        margin-bottom: 40%;
+    }
+    .members {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .general {
+        width: 90%;
+        padding-top: 50px;
+        grid-template-columns: 70% 30%;
+    }
+    .parts h1 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #000000;
+    }
+    .parts p {
+        color: #000000;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        padding: 5px;
+    }
+    .general img {
+        width: 90%;
+        display: block;
+        height: auto;
+        margin: 300px 25px;
+    }
+}
+
+

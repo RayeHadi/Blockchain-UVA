@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>UVA Blockchain</title>
+    <link rel="stylesheet" href="webstyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/logo-trpn.png" />
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo-trpn.png" /></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Our-team.html">Our Team</a></li>
+                    <li><a href="Research.html">Research</a></li>
+                    <li><a href="DA-fund.html">Digital Assets Fund</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+    <section>
+        <div class="team-title">
+            <h1>Research</h1>
+            <p>Dedicated to growing the knowledge and understanding of blokchain<br /> technology on grounds. As well as providing educational opportunities and<br /> experience to our members.</p>
+            <a href="" class="hero-btn">Check out our Blog<br /><i class="fa-solid fa-newspaper"></i></a>
+        </div>
+    </section>
+    <!--Research Goals/Areas of Research-->
+    <section class="general">
+        <div class="parts">
+            <h1>Research Goals</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+        </div>
+        <div>
+            <img src="images/eth.png" />
+        </div>
+        <div class="parts">
+            <h1>Areas of Research</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+        </div>
+        <div>
+            <img src="images/eth.png" />
+        </div>
+    </section>
+    <!--Footer section Below-->
+    <section class="footer">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-envelope"></i> For inquiries, please reach out to us via email:</p><br />
+        <p>blockchain@virginia.edu</p><br />
+        <p>Find us on Linkedin <i class="fa-brands fa-linkedin"></i></p>
+        <p><i class="fa-regular fa-copyright"></i>Blockchain at the University of Virginia. All rights reserved</p>
+    </section>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
