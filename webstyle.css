@@ -200,7 +200,14 @@ nav .fa-solid { /*hides our icons from larger screen*/
     margin-top: 5px;
     font-weight: bold;
 }
-.footer p:nth-of-type(4){
+.footer p:nth-of-type(4) {
+    width: 90%;
+    font-weight: 100;
+    font-size: 11px;
+    padding-top: 20px;
+    text-align: center;
+}
+.footer p:nth-of-type(5){
     font-weight: 100;
     font-size: 13px;
     padding-top: 20px;
