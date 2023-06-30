@@ -753,13 +753,14 @@ nav .fa-solid { /*hides our icons from larger screen*/
         width: 75%;
     }
     .text-box {
+        transform: translate(-50%,-30%);
         top: 15%;
     }
     .text-box h1{
         font-size: 56px
     }
     .mission {
-        padding-top: 450px;
+        padding-top: 500px;
     }
     .row {
         flex-direction: column;
