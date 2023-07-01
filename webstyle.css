@@ -39,6 +39,7 @@ body::after{
 .header > nav > a {
     background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     border-radius: 15px;
+    padding-top: 15px;
 }
 nav { /*general formatting of everything in nav class*/
     display: flex;
@@ -671,6 +672,7 @@ nav .fa-solid { /*hides our icons from larger screen*/
     }
     .text-box {
         top: 15%;
+        transform: translate(-50%,-30%);
     }
     .mission {
         padding-top: 450px;
