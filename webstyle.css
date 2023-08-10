@@ -786,10 +786,6 @@ nav .fa-solid { /*hides our icons from larger screen*/
     .summ p {
         font-size: 10px;
     }
-    .general img {
-        width: 80%;
-        margin: 300px auto;
-    }
     .DA-title {
         transform: translate(-50%, 40%);
     }
@@ -874,10 +870,18 @@ nav .fa-solid { /*hides our icons from larger screen*/
         padding: 5px;
     }
     .general img {
-        width: 90%;
+        width: 100%;
         display: block;
         height: auto;
-        margin: 300px 25px;
+        margin: 200px 10px;
+    }
+    .im2 img {
+        width: 150%;
+        margin-left: -20px;
+        margin-top: 250px;
+    }
+    .im1 img {
+        margin-top: 250px;
     }
 }
 
