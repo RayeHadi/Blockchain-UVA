@@ -290,7 +290,7 @@ nav .fa-solid { /*hides our icons from larger screen*/
     color: #fff;
 }
 .members {
-    width: 80%;
+    width: 85%;
     margin: auto;
     text-align: center;
     padding-top: 60px;
@@ -313,6 +313,11 @@ nav .fa-solid { /*hides our icons from larger screen*/
 .summ{
     color: #fff;
 }
+/*
+.members .mem-col:nth-child(1) h1 {
+    margin-bottom: 45px;
+}
+*/
 .summ p{
     margin-top: 10px;
     font-size: 14px;
@@ -623,6 +628,14 @@ nav .fa-solid { /*hides our icons from larger screen*/
     background-color: #fff;
 }
 /*--------------All media Queries for 700px---------------------*/
+
+
+@media(max-width: 955px) and (min-width: 701px) {
+    .summ h1 {
+        font-size: 15px;/*when screen size changes teh formatting of our photos and descriptions stays consistent*/
+    }
+}
+
 @media(max-width: 700px) and (min-width: 500px) {
     .About-title {
         transform: translate(-50%, 40%);
